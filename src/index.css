@@ -1,13 +1,37 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.item-todo {
+  @apply px-2 py-[10px] bg-gray-100 my-2 rounded-md transition-all flex flex-row justify-between items-center cursor-pointer
+   hover:ring-1 hover:ring-slate-400 hover:bg-slate-100 ;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.item-body {
+  @apply capitalize text-gray-800  group-hover:text-slate-600;
+}
+
+
+
+.complete-todo {
+  @apply ring-1 ring-green-400 bg-green-100;
+}
+.complete-todo {
+  @apply hover:ring-green-400 hover:bg-green-100;
+}
+
+.container-input {
+  @apply w-2/4 mx-auto bg-green-500 rounded-md h-[50px] overflow-hidden ring-1 ring-gray-200;
+}
+
+.btn-add {
+  @apply transition-all w-1/4 text-center uppercase text-white hover:bg-gray-800 h-full;
+}
+
+.input-todo {
+ @apply w-3/4 h-full outline-none  border-0   bg-gray-100 pl-2;
 }
